@@ -1,5 +1,6 @@
 package com.example.eodigang;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +24,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -102,6 +105,8 @@ public class feedback extends AppCompatActivity {
                 // 아무것도 선택되지 않았을 때의 동작
             }
         });
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,8 +115,11 @@ public class feedback extends AppCompatActivity {
                 String selectedPlace3 = placeList3.get(spinner3.getSelectedItemPosition());
                 String weekNum = getCurrentDayOfWeek();
                 String currentTime = getCurrentTime();
+                Log.v(TAG, "서버에 보낼 데이터: " + weekNum);
+                Log.v(TAG, "서버에 보낼 데이터: " + currentTime);
 
-                new DownloadTask(3, selectedPlace1, selectedPlace2, selectedPlace3, weekNum, currentTime).execute();
+                new DownloadTask(4, selectedPlace1, selectedPlace2, selectedPlace3, weekNum, currentTime).execute();
+
             }
         });
     }
@@ -166,9 +174,9 @@ public class feedback extends AppCompatActivity {
                 } else if (spinnerNumber == 3){
                     urlString = "http://10.0.2.2/findplace3.php?place1=" + place1 + "&place2=" + place2;
                 } else{
-                    urlString = "http://10.0.2.2/feedback.php?place1="+ place1 + "&place2=" + place2 + "&place3=" + place3 + "&week_num=" + week_num + "&TIME=" + TIME;
+                    Log.v(TAG, "서버"+place1+place2+place3+week_num+TIME);
+                    urlString = "http://10.0.2.2/feedback.php?place1=" + place1 + "&place2=" + place2 + "&place3=" + place3 + "&week_num=" + week_num + "&TIME=" + TIME;
                 }
-
                 // 서버 URL 설정
                 URL url = new URL(urlString);
 
@@ -193,6 +201,7 @@ public class feedback extends AppCompatActivity {
                     inputStream.close();
 
                     result = stringBuilder.toString();
+                    Log.v(TAG, "서버 "+ result );
                 } else {
                     Log.e(TAG, "서버 연결 실패, 응답 코드: " + responseCode);
                 }
@@ -245,7 +254,7 @@ public class feedback extends AppCompatActivity {
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(feedback.this, android.R.layout.simple_spinner_item, placeList2);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner2.setAdapter(adapter);
-                } else {
+                } else if (spinnerNumber == 3) {
                     placeList3.clear();
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -256,10 +265,12 @@ public class feedback extends AppCompatActivity {
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(feedback.this, android.R.layout.simple_spinner_item, placeList3);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner3.setAdapter(adapter);
-                }
+                } else {
 
+                }
             } catch (JSONException e) {
-                Log.e(TAG, "JSON 파싱 에러: " + e.getMessage());
+                Log.e(TAG, "서버 JSON 파싱 에러: " + e.getMessage());
+                Toast.makeText(getApplicationContext(), "업데이트", Toast.LENGTH_LONG).show();
             }
         }
     }
