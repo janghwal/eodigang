@@ -14,9 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button feedback_btn;
-
+        Button feedback_btn, empty_class_btn, timetable_btn;
+        empty_class_btn = findViewById(R.id.empty_class);
         feedback_btn = findViewById(R.id.feedback);
+        timetable_btn = findViewById(R.id.timetable);
+
         feedback_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,5 +26,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        empty_class_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, empty_class.class);
+                startActivity(intent);
+            }
+        });
+
+        timetable_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, timetable.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
