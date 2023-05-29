@@ -1,9 +1,848 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".timetable">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:id="@+id/schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="5"
+        android:orientation="horizontal"
+        android:rowCount="19">
+
+
+        <TextView
+            android:layout_height="20dp"
+            android:layout_columnWeight="1"
+            android:text="월"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_height="20dp"
+            android:layout_columnWeight="1"
+            android:text="화"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_height="20dp"
+            android:layout_columnWeight="1"
+            android:text="수"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_height="20dp"
+            android:layout_columnWeight="1"
+            android:text="목"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_height="20dp"
+            android:layout_columnWeight="1"
+            android:text="금"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:gravity="center" />
+
+
+        <TextView
+            android:id="@+id/mon1"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue1"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed1"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu1"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri1"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon2"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue2"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed2"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu2"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri2"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon3"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue3"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed3"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu3"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri3"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon4"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue4"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed4"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu4"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri4"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon5"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue5"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed5"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu5"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri5"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon6"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue6"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed6"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu6"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri6"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon7"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue7"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed7"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu7"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri7"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon8"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue8"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed8"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu8"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri8"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon9"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue9"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed9"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu9"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri9"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/mon10"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue10"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed10"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu10"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri10"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon11"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue11"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed11"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu11"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri11"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon12"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue12"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed12"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu12"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri12"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon13"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue13"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed13"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu13"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri13"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon14"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue14"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed14"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu14"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri14"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon15"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue15"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed15"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu15"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri15"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon16"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue16"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed16"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu16"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri16"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon17"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue17"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed17"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu17"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/fri17"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/mon18"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tue18"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/wed18"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/thu18"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+        <TextView
+
+            android:id="@+id/fri18"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cell"
+            android:text=""
+            android:gravity="center" />
+
+    </GridLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_course"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/cell"
+            android:hint="과목명을 입력하세요." />
+
+        <EditText
+            android:id="@+id/et_section"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/cell"
+            android:hint="분반을 입력하세요." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addCourseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="추가"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/removeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="모두 삭제"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

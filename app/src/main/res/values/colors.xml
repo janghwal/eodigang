@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- 8개 Color 정의, 배열로 돌려가면서 사용 -->
+    <color name="tt001">#747AF1</color>
+    <color name="tt002">#EDF886</color>
+    <color name="tt003">#86E68A</color>
+    <color name="tt004">#EE9AF4</color>
+    <color name="tt005">#F1C585</color>
+    <color name="tt006">#78F6EA</color>
+    <color name="tt007">#F1938C</color>
+    <color name="tt008">#8BBDE4</color>
 </resources>

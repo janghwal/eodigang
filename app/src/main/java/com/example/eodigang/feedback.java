@@ -120,6 +120,8 @@ public class feedback extends AppCompatActivity {
 
                 new DownloadTask(4, selectedPlace1, selectedPlace2, selectedPlace3, weekNum, currentTime).execute();
 
+                Intent intent = new Intent(feedback.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
